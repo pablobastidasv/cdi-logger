@@ -2,9 +2,8 @@ group 'co.pablobastidasv'
 version '1.0-SNAPSHOT'
 
 apply from: "$rootDir/gradle/java.gradle"
+apply from: "$rootDir/gradle/maven.gradle"
 apply plugin: 'idea'
-
-sourceCompatibility = 1.8
 
 task wrapper(type: Wrapper){
     gradleVersion = "3.3"

@@ -12,3 +12,7 @@ sourceSets {
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
+
+ext{
+    compatibilityVersion = 1.8
+}
