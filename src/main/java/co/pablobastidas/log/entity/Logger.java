@@ -1,7 +1,9 @@
 package co.pablobastidas.log.entity;
 
 /**
- * Created by DELL on 17/01/2017.
+ * Contract interface for logging options
+ *
+ * @author pablobastidasv
  */
 public interface Logger {
 

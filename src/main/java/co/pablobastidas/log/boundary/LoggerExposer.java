@@ -7,7 +7,10 @@ import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 
 /**
- * Created by DELL on 17/01/2017.
+ * Logger exposer, presented as a basic logging using java logging
+ * @see java.util.logging.Logger
+ *
+ * @author pablobastidasv
  */
 public class LoggerExposer {
 

@@ -6,7 +6,11 @@ import java.text.MessageFormat;
 import java.util.logging.Level;
 
 /**
- * Created by DELL on 17/01/2017.
+ * Implementation of our logger contract ussing java Logger
+ *
+ * @see java.util.logging.Logger
+ *
+ * @author pablobastidasv
  */
 public class LoggerDefaultImpl implements Logger {
 
@@ -14,6 +18,15 @@ public class LoggerDefaultImpl implements Logger {
 
     public LoggerDefaultImpl(Class clazz) {
         this.logger = java.util.logging.Logger.getLogger(clazz.getName());
+    }
+
+    /**
+     * Gets logger
+     *
+     * @return value of logger
+     */
+    public java.util.logging.Logger getLogger() {
+        return logger;
     }
 
     @Override
