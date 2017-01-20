@@ -33,7 +33,7 @@ cdi managed class and then used.
 private Logger log;
 
 @Inject
-public setLogger(@Log Logger log){
+public setLogger(Logger log){
     this.log = log;
 }
 

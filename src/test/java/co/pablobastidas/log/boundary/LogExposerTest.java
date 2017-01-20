@@ -30,7 +30,7 @@ public class LogExposerTest {
     private StreamHandler testLogHandler;
 
     @Inject
-    public void setLog(@Log Logger log) {
+    public void setLog(Logger log) {
         this.log = log;
     }
 

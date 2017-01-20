@@ -15,7 +15,6 @@ import javax.enterprise.inject.spi.InjectionPoint;
 public class LoggerExposer {
 
     @Produces
-    @Log
     public Logger producesLogger(InjectionPoint ip){
         return new LoggerDefaultImpl(ip.getMember().getDeclaringClass());
     }
