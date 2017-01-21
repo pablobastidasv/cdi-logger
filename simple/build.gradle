@@ -1,14 +1,21 @@
 apply plugin: 'maven'
 
+version '0.0.1'
+
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://nexus-bassanco2.rhcloud.com/repository/maven-snapshots/") {
+            repository(url: "http://nexus-bassanco2.rhcloud.com/repository/maven-releases/") {
                 authentication(userName: "$bassanNexusUser", password: "$bassanNexusPass")
             }
             pom.version = "$version"
-            pom.artifactId = "cdi-logger-api"
+            pom.artifactId = "cdi-logger-simple"
             pom.groupId = "co.pablobastidasv"
         }
     }
 }
+
+dependencies{
+    compile project(":api")
+}
+

@@ -1,6 +1,6 @@
 package co.pablobastidas.log.boundary;
 
-import co.pablobastidas.log.control.LoggerDefaultImpl;
+import co.pablobastidas.log.control.SimpleLogger;
 import co.pablobastidas.log.entity.Logger;
 import org.apache.deltaspike.testcontrol.api.junit.CdiTestRunner;
 import org.junit.Before;
@@ -37,7 +37,7 @@ public class LogExposerTest {
     @Before
     public void setUp(){
 
-        LoggerDefaultImpl log = (LoggerDefaultImpl) this.log;
+        SimpleLogger log = (SimpleLogger) this.log;
 
         logOut = new ByteArrayOutputStream();
         Handler[] handlers = log.getLogger().getParent().getHandlers();

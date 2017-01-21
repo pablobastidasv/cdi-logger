@@ -12,11 +12,11 @@ import java.util.logging.Level;
  *
  * @author pablobastidasv
  */
-public class LoggerDefaultImpl implements Logger {
+public class SimpleLogger implements Logger {
 
     private java.util.logging.Logger logger;
 
-    public LoggerDefaultImpl(Class clazz) {
+    public SimpleLogger(Class clazz) {
         this.logger = java.util.logging.Logger.getLogger(clazz.getName());
     }
 
