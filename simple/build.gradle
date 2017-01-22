@@ -1,6 +1,12 @@
 apply plugin: 'maven'
 
-version '0.0.1'
+version '0.0.2'
+
+repositories {
+    maven {
+        url "http://nexus-bassanco2.rhcloud.com/repository/maven-public"
+    }
+}
 
 uploadArchives {
     repositories {
@@ -16,6 +22,6 @@ uploadArchives {
 }
 
 dependencies{
-    compile project(":api")
+    compile group:'co.pablobastidasv', name:'cdi-logger-api', version:'0.0.1'
 }
 

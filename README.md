@@ -20,8 +20,10 @@ for 2 minutes and try again.
 ### Add dependency
 
 #### Gradle
+
+#### Simple logger
 ```groovy
-compile group: 'co.pablobastidasv', name: 'cdi-logger-api', version:'1.0-SNAPSHOT'
+compile group: 'co.pablobastidasv', name: 'cdi-logger-simple', version:'0.0.2'
 ```
 
 ### In your code
