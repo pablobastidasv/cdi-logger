@@ -1,10 +1,10 @@
 package co.pablobastidas.log.boundary;
 
-import co.pablobastidas.log.control.SimpleLogger;
-import co.pablobastidas.log.entity.Logger;
-
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
+
+import co.pablobastidas.log.control.SimpleLogger;
+import co.pablobastidas.log.entity.Logger;
 
 /**
  * Logger exposer, presented as a basic logging using java logging

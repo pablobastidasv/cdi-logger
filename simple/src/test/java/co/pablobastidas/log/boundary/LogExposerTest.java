@@ -73,8 +73,8 @@ public class LogExposerTest {
 
     @Test
     public void testInfoMessageWithArg(){
-        String expectedMessage = "hola que hace esto ó lo otro!!!";
-        log.info("hola que hace {0} ó {1}!!!", "esto", "lo otro");
+        String expectedMessage = "hola que hace esto o lo otro!!!";
+        log.info("hola que hace {0} o {1}!!!", "esto", "lo otro");
 
         validateMessage(expectedMessage, Level.INFO);
     }
