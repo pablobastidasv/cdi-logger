@@ -2,33 +2,29 @@
 
 Logger injection strategy for CDI. 
 
-This injector use the standar logging library `java.util.logging.*` to log.
+This injector use the standard logging library `java.util.logging.*` to log.
 
-## Way to use
-### Add repository 
-
-#### Gradle
-``` groovy
-maven {
-    url "http://nexus-bassanco2.rhcloud.com/repository/maven-public"
-}
-```
-##### Note
-This repository is free so could not be working, in case you have a 503 error please wait 
-for 2 minutes and try again.
+## Getting started
 
 ### Add dependency
 
 #### Gradle
-
-#### Simple logger
 ```groovy
-compile group: 'co.pablobastidasv', name: 'cdi-logger-simple', version:'0.0.2'
+compile group: 'io.github.pablobastidasv', name: 'cdi-simple-logger', version:{version}
+```
+
+#### Maven
+```xml
+<dependencies>
+    <groupId>io.github.pablobastidasv</groupId>
+    <artifactId>cdi-simple-logger</artifactId>
+    <version>{version}</version>
+</dependencies>
 ```
 
 ### In your code
 
-You must work in a java project with CDI 1.1 support. You must inject the Logger in your
+You must work in a java project with CDI 1.+/2.+ support. You must inject the Logger in your
 cdi managed class and then used.
 
 ````java
