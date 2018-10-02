@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pablobastidasv/cdi-logger.svg?branch=master)](https://travis-ci.org/pablobastidasv/cdi-logger)
+
 # CDI Logger
 
 Logger injection strategy for CDI. 
