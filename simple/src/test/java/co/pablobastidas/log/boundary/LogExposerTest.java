@@ -29,6 +29,9 @@ public class LogExposerTest {
     private OutputStream logOut;
     private StreamHandler testLogHandler;
 
+    String errorMessage = "Error Message";
+    IllegalArgumentException error = new IllegalArgumentException(errorMessage);
+
     @Inject
     public void setLog(Logger log) {
         this.log = log;
@@ -55,12 +58,26 @@ public class LogExposerTest {
                 contains(msg);
     }
 
+    private void validateMessage(String msg, Level level, Throwable t) {
+        validateMessage(msg, level);
+        assertThat(logOut.toString())
+                .contains(t.getMessage());
+    }
+
     @Test
     public void testInfoMessage(){
         String msg = "hola que hace!!!";
         log.info(msg);
 
         validateMessage(msg, Level.INFO);
+    }
+
+    @Test
+    public void testInfoMessageWithException(){
+        String msg = "hola que hace!!!";
+        log.info(msg, error);
+
+        validateMessage(msg, Level.INFO, error);
     }
 
     @Test
@@ -72,10 +89,50 @@ public class LogExposerTest {
     }
 
     @Test
+    public void testDebugMessageMessage(){
+        String msg = "hola que hace!!!";
+        log.debug(msg, error);
+
+        validateMessage(msg, Level.FINE, error);
+    }
+
+    @Test
     public void testInfoMessageWithArg(){
         String expectedMessage = "hola que hace esto o lo otro!!!";
         log.info("hola que hace {0} o {1}!!!", "esto", "lo otro");
 
         validateMessage(expectedMessage, Level.INFO);
+    }
+
+    @Test
+    public void testWarnMessage(){
+        String msg = "hola que hace!!!";
+        log.warn(msg);
+
+        validateMessage(msg, Level.WARNING);
+    }
+
+    @Test
+    public void testWarnMessageWithException(){
+        String msg = "hola que hace!!!";
+        log.warn(msg, error);
+
+        validateMessage(msg, Level.WARNING, error);
+    }
+
+    @Test
+    public void testErrorMessage(){
+        String msg = "hola que hace!!!";
+        log.error(msg);
+
+        validateMessage(msg, Level.SEVERE);
+    }
+
+    @Test
+    public void testErrorMessageWithException(){
+        String msg = "hola que hace!!!";
+        log.error(msg, error);
+
+        validateMessage(msg, Level.SEVERE, error);
     }
 }
