@@ -18,7 +18,7 @@
         <deltaspike.version>1.7.2</deltaspike.version>
         <weld.version>2.4.7.Final</weld.version>
         <junit.version>4.13.1</junit.version>
-        <assertj.version>3.9.1</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
     </properties>
 
     <dependencies>
